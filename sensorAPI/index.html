@@ -24,10 +24,15 @@
       
             function onOpen(evt) {
                 window.addEventListener('deviceorientation',(e)=>{
+                    var  data = {
+                        "alpha: ": `${e.alpha}`,
+                        "beta: ": `${e.beta}`,
+                        "gamma: ": `${e.gamma}`
+                    }
                 document.getElementById("alpha").textContent=`Alpha: ${e.alpha}`;
                 document.getElementById("beta").textContent=`Beta: ${e.beta}`;
                 document.getElementById("gamma").textContent=`Gamma: ${e.gamma}`;
-                websocket.send(e.alpha);
+                websocket.send(JSON.stringify(data));
             })
             }
       
