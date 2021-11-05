@@ -5,47 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sensor Data</title>
-        <script language = "javascript" type = "text/javascript">
-            var wsUri = "ws://10.0.0.49/ws";
-            var output;
-      
-            function init() {
-               output = document.getElementById("output");
-               testWebSocket();
-            }
-      
-            function testWebSocket() {
-               websocket = new WebSocket(wsUri);
-      
-               websocket.onopen = function(evt) {
-                  onOpen(evt)
-               };
-            }
-      
-            function onOpen(evt) {
-                window.addEventListener('deviceorientation',(e)=>{
-                    var  data = {
-                        "alpha": e.alpha,
-                        "beta": e.beta,
-                        "gamma": e.gamma
-                    }
-                document.getElementById("alpha").textContent=`Alpha: ${e.alpha}`;
-                document.getElementById("beta").textContent=`Beta: ${e.beta}`;
-                document.getElementById("gamma").textContent=`Gamma: ${e.gamma}`;
-                websocket.send(JSON.stringify(data));
-            })
-            }
-      
-            window.addEventListener("load", init, false);
-      
-         </script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Home Drone Security</h1>
+        <h1 id="toggle-full-screen">Home Drone Security</h1>
+        <div class="img">
+            <img src="https://nofilmschool.com/sites/default/files/styles/article_wide/public/camera_1.jpg?itok=qBFCPVR5" alt="" style="width: 200px;height:200px;">
+        </div>
+        <div class="data-readings">
         <p id="alpha"></p>
         <p id="beta"></p>
         <p id="gamma"></p>
+        </div>
+        <div class="throttle">
+            <input id="myslider" type="range" min="1000" value="1" step=".001" max="2000">
+        </div>
+        <p id="throttle-value">1000</p>
+        <p id="throttle" style="position: absolute;right: 45px;bottom: 5px;">Throttle</p>
         <div id="output"></div>
-        <img src="" alt="">
     </body>
+    <script src="script.js" language = "javascript" type = "text/javascript">  
+    </script>
+    <script src="toggle.js"></script>
 </html>
