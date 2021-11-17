@@ -9,21 +9,15 @@
     </head>
     <body>
         <h1 id="toggle-full-screen">Home Drone Security</h1>
-        <div class="img">
-            <img src="https://nofilmschool.com/sites/default/files/styles/article_wide/public/camera_1.jpg?itok=qBFCPVR5" alt="" style="width: 200px;height:200px;">
-        </div>
-        <div class="data-readings">
-        <p id="alpha"></p>
-        <p id="beta"></p>
-        <p id="gamma"></p>
-        </div>
-        <div class="throttle">
-            <input id="myslider" type="range" min="0" value="1" step="1" max="255">
-        </div>
-        <p id="throttle-value">0</p>
-        <p id="throttle" style="position: absolute;right: 45px;bottom: 5px;">Throttle</p>
-        <div id="output"></div>
-    </body>
+        <input id="throttle" type="range" min="0" value="0" step="1" max="255">
+        <p id="throttle-header">throttle</p>
+        <input id="yaw" type="range" min="0" value="0" step="1" max="255">
+        <p id="yaw-header">yaw</p>
+        <input id="pitch" type="range" min="0" value="0" step="1" max="255">
+        <p id="pitch-header">pitch</p>
+        <input id="roll" type="range" min="0" value="0" step="1" max="255">
+        <p id="roll-header">roll</p>
+        </body>
     <script src="script.js" language = "javascript" type = "text/javascript">  
     </script>
     <script src="toggle.js"></script>

@@ -14,27 +14,41 @@ function testWebSocket() {
     };
 }
 
+
 //when connection is established
 function onOpen(evt) {
-    let slider = document.querySelector('#myslider');
-    slider.addEventListener('touchmove', (e)=>{
+let throttleSlider = document.querySelector('#throttle');
+let yawSlider = document.querySelector('#yaw');
+let pitchSlider = document.querySelector('#pitch');
+let rollSlider = document.querySelector('#roll');
+
+throttleSlider.addEventListener('touchmove', (e)=>{
         let throttle = {
-                        "throttle" : Number.parseInt(slider.value).toFixed(0)
+                        "throttle" : Number.parseInt(throttleSlider.value).toFixed(0)
                     };
-        document.getElementById('throttle-value').textContent=throttle.throttle
+        //console.log("Throttle: "+throttle.throttle)
         websocket.send(JSON.stringify(throttle))
     })
-    //expose device's orientation
-    window.addEventListener('deviceorientation',(e)=>{
-        var  data = {
-            "alpha": e.alpha,
-            "beta": e.beta,
-            "gamma": e.gamma
-        }
-    document.getElementById("alpha").textContent=`Alpha: ${e.alpha}`;
-    document.getElementById("beta").textContent=`Beta: ${e.beta}`;
-    document.getElementById("gamma").textContent=`Gamma: ${e.gamma}`;
-    websocket.send(JSON.stringify(data));
+yawSlider.addEventListener('touchmove', (e)=>{
+    let yaw = {
+                    "yaw" : Number.parseInt(yawSlider.value).toFixed(0)
+                };
+    //console.log("Yaw: "+yaw.yaw)
+    websocket.send(JSON.stringify(yaw))
+})
+pitchSlider.addEventListener('touchmove', (e)=>{
+    let pitch = {
+                    "pitch" : Number.parseInt(pitchSlider.value).toFixed(0)
+                };
+    //console.log("Pitch: "+pitch.pitch)
+    websocket.send(JSON.stringify(pitch))
+})
+rollSlider.addEventListener('touchmove', (e)=>{
+    let roll = {
+                    "roll" : Number.parseInt(rollSlider.value).toFixed(0)
+                };
+    //console.log("Roll: "+roll.roll)
+    websocket.send(JSON.stringify(roll))
 })
 }
 

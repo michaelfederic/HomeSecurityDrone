@@ -10,48 +10,81 @@ h1{
     padding: 10px 0 0 0;
     color: #000;
 
-
-
-}
-.img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-img{
-    position: absolute;
-    top:25%;
-    -webkit-box-shadow: 0px 0px 15px 4px #000000; 
-    box-shadow: 0px 0px 15px 4px #000000;
-    border-radius: 3px;
-
-    
 }
 
-
-.data-readings{
-    position: absolute;
-    left:30px;
-    top:175px;
-}
-#myslider{
+#throttle{
     -webkit-appearance: slider-vertical; 
     position: absolute;
     width: 50px;
-    right:50px;
-    top:45px;
-    height: 300px;
+    left:115px;
+    top:90px;
+    height: 150px;
     border-radius: 30px;
 
 }
-
-#throttle-value{
+#throttle-header{
     position: absolute;
-    right:15%;
-    top: 50%;
-
+    left:86px;
+    top:250px;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    
 }
 
+#yaw{
+    position: absolute;
+    width: 150px;
+    left:70px;
+    bottom:80px;
+    height:10px;
+    border-radius: 30px;
 
+}
+#yaw-header{
+    position: absolute;
+    left:123px;
+    bottom:50px;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
+
+#pitch{
+    -webkit-appearance: slider-vertical; 
+    position: absolute;
+    width: 50px;
+    right:115px;
+    top:90px;
+    height: 150px;
+    border-radius: 30px;
+
+}
+#pitch-header{
+    position: absolute;
+    right:105px;
+    top:250px;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
+
+#roll{
+    position: absolute;
+    width: 150px;
+    right:70px;
+    bottom:85px;
+    height: 10px;
+    border-radius: 30px;
+}
+#roll-header{
+    position: absolute;
+    right:105px;
+    bottom:50px;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
