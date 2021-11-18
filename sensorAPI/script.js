@@ -10,6 +10,7 @@ function testWebSocket() {
     websocket = new WebSocket(wsUri);
 
     websocket.onopen = function(evt) {
+        document.getElementById("connected").style.display="block";
         onOpen(evt)
     };
 }
