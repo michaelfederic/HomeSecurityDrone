@@ -1,4 +1,4 @@
-var wsUri = "ws://10.0.0.233/ws";
+var wsUri = "ws://10.0.0.232/ws";
 var output;
 
 function init() {
