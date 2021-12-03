@@ -197,56 +197,6 @@
          //canvas.unbind('touchmove');
      }
  
-    //  /**
-    //   * @desc Events for manage mouse
-    //   */
-    //  function onMouseDown(event) 
-    //  {
-    //      pressed = 1;
-    //  }
- 
-    //  function onMouseMove(event) 
-    //  {
-    //      if(pressed === 1)
-    //      {
-    //          movedX = event.pageX;
-    //          movedY = event.pageY;
-    //          // Manage offset
-    //          if(canvas.offsetParent.tagName.toUpperCase() === "BODY")
-    //          {
-    //              movedX -= canvas.offsetLeft;
-    //              movedY -= canvas.offsetTop;
-    //          }
-    //          else
-    //          {
-    //              movedX -= canvas.offsetParent.offsetLeft;
-    //              movedY -= canvas.offsetParent.offsetTop;
-    //          }
-    //          // Delete canvas
-    //          context.clearRect(0, 0, canvas.width, canvas.height);
-    //          // Redraw object
-    //          drawExternal();
-    //          drawInternal();
-    //      }
-    //  }
- 
-    //  function onMouseUp(event) 
-    //  {
-    //      pressed = 0;
-    //      // If required reset position store variable
-    //      if(autoReturnToCenter)
-    //      {
-    //          movedX = centerX;
-    //          movedY = centerY;
-    //      }
-    //      // Delete canvas
-    //      context.clearRect(0, 0, canvas.width, canvas.height);
-    //      // Redraw object
-    //      drawExternal();
-    //      drawInternal();
-    //      //canvas.unbind('mousemove');
-    //  }
- 
      /******************************************************
       * Public methods
       *****************************************************/
