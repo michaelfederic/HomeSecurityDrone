@@ -70,6 +70,7 @@ body
 	border: 1px solid #0000FF;
 }
 		</style>
+        
 		<script src="joy.js"></script>
 	</head>
 	<body>
@@ -93,7 +94,7 @@ body
 				Y :<input id="joy1Y" type="text" />
 			</div>
 			<div class="columnCetral">
-				<h2>JoyStick</h2>
+				<h2 id="toggle-full-screen">JoyStick</h2>
 			</div>
 			<div class="columnLateral">
 				<div id="joy2Div"></div>
@@ -172,5 +173,6 @@ websocket.send(JSON.stringify(throttle))}, 50);
 
 window.addEventListener("load", init, false);
 		</script>
+        <script src="toggle.js"></script>
 	</body>
 </html>
