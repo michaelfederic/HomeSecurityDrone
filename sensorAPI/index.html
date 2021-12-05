@@ -124,20 +124,20 @@ var joy1Direzione = document.getElementById("joy1Direzione");
 var joy1X = document.getElementById("joy1X");
 var joy1Y = document.getElementById("joy1Y");
 
-setInterval(function(){ joy1IinputPosX.value=Joy1.GetPosX(); }, 1);
-setInterval(function(){ joy1InputPosY.value=Joy1.GetPosY(); }, 1);
-setInterval(function(){ joy1Direzione.value=Joy1.GetDir(); }, 1);
+setInterval(function(){ joy1IinputPosX.value=Joy1.GetPosX(); }, 50);
+setInterval(function(){ joy1InputPosY.value=Joy1.GetPosY(); }, 50);
+setInterval(function(){ joy1Direzione.value=Joy1.GetDir(); }, 50);
 setInterval(function(){ joy1X.value=Joy1.GetX(); 
 	let yaw = {
 		"yaw": Number.parseInt(Joy1.GetX())
 	}
 websocket.send(JSON.stringify(yaw))
-}, 1);
+}, 50);
 setInterval(function(){ joy1Y.value=Joy1.GetY(); 
 	let throttle = {
 		"throttle": Number.parseInt(Joy1.GetY())
 	}
-websocket.send(JSON.stringify(throttle))}, 1);
+websocket.send(JSON.stringify(throttle))}, 50);
 
 // Create JoyStick object inyawto the DIV 'joy2Div'
 //joy2 is on the right
@@ -149,19 +149,19 @@ var joy2Direzione = document.getElementById("joy2Direzione");
 var joy2X = document.getElementById("joy2X");
 var joy2Y = document.getElementById("joy2Y");
 
-setInterval(function(){ joy2IinputPosX.value=Joy2.GetPosX();}, 1);
-setInterval(function(){ joy2InputPosY.value=Joy2.GetPosY(); }, 1);
-setInterval(function(){ joy2Direzione.value=Joy2.GetDir(); }, 1);
+setInterval(function(){ joy2IinputPosX.value=Joy2.GetPosX();}, 50);
+setInterval(function(){ joy2InputPosY.value=Joy2.GetPosY(); }, 50);
+setInterval(function(){ joy2Direzione.value=Joy2.GetDir(); }, 50);
 setInterval(function(){ joy2X.value=Joy2.GetX(); 
 	let roll = {
 		"roll": Number.parseInt(Joy2.GetX())
 	}
-websocket.send(JSON.stringify(roll))}, 1);
+websocket.send(JSON.stringify(roll))}, 50);
 setInterval(function(){ joy2Y.value=Joy2.GetY(); 
 	let pitch = {
 		"pitch": Number.parseInt(Joy2.GetY())
 	}
-websocket.send(JSON.stringify(pitch))}, 1);
+websocket.send(JSON.stringify(pitch))}, 50);
     };
 }
 
